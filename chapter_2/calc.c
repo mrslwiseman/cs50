@@ -11,29 +11,29 @@ int main(int argc, char* argv[])
         return 1;
     };
 
-    int operator = argv[2][0];
+    char operator = (char)argv[2][0];
     float a = atof(argv[1]);
     float b = atof(argv[3]);
 
     switch(operator)
     {
-        case 43: // +
+        case '+':
             printf("%f\n", (a + b));
             break;
-        case 45: // -
+        case '-':
             printf("%f\n", (a - b));
             break;
-        case 120: // x
+        case 'x':
             printf("%f\n", (a * b));
             break;
-        case 47: // /
+        case '/':
             printf("%f\n", (a / b));
             break;
-        case 37: // %
+        case '%':
             printf("%f\n", (a - (b * (int)(a / b ))));
             break;
         default:
-            printf("Sorry I can only do simple equations using +, -, /, x, mod");
+            printf("Sorry I can only do simple equations using +, -, /, x, %%");
             return 1;
     };
 
